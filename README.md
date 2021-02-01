@@ -8,6 +8,10 @@ I use Plug to manage my plugins, so that's the one I'll recommend
 Add something like the following to your `.vimrc` after installing the [`Plug`](https://github.com/junegunn/vim-plug) Vim package manager 
 
 ```vim
+augroup pegn_syntax
+	au! BufNewFile,BufRead *.pegn set filetype=PEGN
+augroup END
+
 call plug#begin('/dir/to/your/vimplugins')
 Plug 'Zeroandahalf/pegn-vim'
 call plug#end()
